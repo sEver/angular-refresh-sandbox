@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'angular-warmup-sandbox' title`, () => {
+  it(`should have the 'angular-refresh-sandbox' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-warmup-sandbox');
+    expect(app.title).toEqual('angular-refresh-sandbox');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-warmup-sandbox');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-refresh-sandbox');
   });
 });
