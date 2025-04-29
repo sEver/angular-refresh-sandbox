@@ -11,8 +11,12 @@ import { HousingLocation } from '../housing-location';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  housingLocationId: number = -1;
+  housingService = inject(HousingService);
+  housingLocation: HousingLocation | undefined;
+
+
   constructor() {
-    this.housingLocationId = Number(this.route.snapshot.params['id']);
+    const housingLocationId = Number(this.route.snapshot.params['id']);
+    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
   }
 }
